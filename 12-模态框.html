@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./bootstrap-3.4.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./bootstrap-3.4.1/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">展示模态框</button>
+    <button class="btn btn-primary" id="btn">展示模态框</button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">模态框（Modal）标题</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="uname" class="col-md-2 control-label">姓名</label>
+                        <div class="col-md-8">
+                            <input type="text" id="uname" class="form-control" placeholder="请输入姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="upwd" class="col-md-2 control-label">密码</label>
+                        <div class="col-md-8">
+                            <input type="text" id="upwd" class="form-control" placeholder="请输入密码">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sunmit_btn">提交更改</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $("#btn").click(function(){
+            $("#myModal").modal("show");
+        });
+        $("sunmit_btn").click(function(){
+            $("#myModal").modal('hide');
+        });
+    </script>
+</body>
+</html>

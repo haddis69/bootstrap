@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./bootstrap-3.4.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="./jquery-3.6.0.js"></script>
+    <script src="./bootstrap-3.4.1/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <p>总数不能超过12否则会换行</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" style="background-color: red;">4</div>
+            <div class="col-md-8" style="background-color: green;">8</div>
+        </div>
+    </div>
+    <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1" style="background-color: blue;">1</div>
+            <div class="col-md-2" style="background-color: yellow;">2</div>
+            <div class="col-md-1" style="background-color: purple;">1</div>
+            <div class="col-md-3" style="background-color: pink;">3</div>
+        </div>
+    </div>
+    <p>偏移+大小不能超过12否则会换行</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" style="background-color: red;">4</div>
+            <div class="col-md-3 col-md-offset-1" style="background-color: blue;">3</div>
+            <div class="col-md-3" style="background-color: green;">3</div>
+        </div>
+    </div>
+    <p>会被之后的元素覆盖,push向后pull向前</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1" style="background-color: red;">1</div>
+            <div class="col-md-1 col-md-push-5" style="background-color: green;">1</div>
+            <div class="col-md-1" style="background-color: yellow;">1</div>
+            <div class="col-md-1" style="background-color: blue;">1</div>
+        </div>
+    </div>
+    <p>列嵌套,无论怎么嵌套，同样每行不能超过12子列</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="background-color: red;">
+                <div class="row">
+                    <div class="col-md-4" style="background-color: coral;">4</div>
+                    <div class="col-md-4" style="background-color: green;">4</div>
+                    <div class="col-md-3" style="background-color: yellow;">3</div>
+                </div> 
+            </div>
+            <div class="col-md-6" style="background-color: green;">6</div>
+        </div>
+    </div>
+</body>
+</html>
